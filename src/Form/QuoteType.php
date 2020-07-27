@@ -21,7 +21,9 @@ class QuoteType extends AbstractType
             ])
             ->add('type', EntityType::class, [
                 'class' => \App\Entity\QuoteType::class,
-                'choice_label' => 'name'
+                'choice_label' => 'name',
+                'placeholder' => 'choose a type',
+                'required' => false,
             ])
         ;
     }

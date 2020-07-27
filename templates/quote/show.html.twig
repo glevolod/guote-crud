@@ -15,6 +15,16 @@
                 <th>Text</th>
                 <td>{{ quote.text }}</td>
             </tr>
+            <tr>
+                <th>Author</th>
+                <td>{{ quote.author }}</td>
+            </tr>
+            {% if quote.type %}
+                <tr>
+                    <th>Type</th>
+                    <td>{{ quote.type }}</td>
+                </tr>
+            {% endif %}
         </tbody>
     </table>
 

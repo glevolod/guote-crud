@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello! ✅</h1>
+    <h3>You can manage Quotes, QuotesTypes, and their Autohors</h3>
+    <br>
+    <ul>
+        <li>Manage <b>Quotes</b> <code><a href="{{ path('quote_index') }}">here</a></code></li>
+        <hr>
+        <li>Manage <b>Authors</b> <code><a href="{{ path('author_index') }}">here</a></code></li>
+        <li>Manage <b>Quote Types</b> <code><a href="{{ path('quote_type_index') }}">here</a></code></li>
+    </ul>
+</div>
+{% endblock %}
