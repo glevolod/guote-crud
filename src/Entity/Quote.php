@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\QuoteRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=QuoteRepository::class)
@@ -18,13 +19,18 @@ class Quote
     private $id;
 
     /**
-     * @ORM\Column(type="text", length=1000)
+     * @ORM\Column(type="text")
+     *
+     * @Assert\NotBlank()
+     * @Assert\Length(min=5, max=5000)
      */
     private $text;
 
     /**
      * @ORM\ManyToOne(targetEntity=Author::class, inversedBy="quotes")
      * @ORM\JoinColumn(nullable=false)
+     *
+     * @Assert\NotBlank()
      */
     private $author;
 
